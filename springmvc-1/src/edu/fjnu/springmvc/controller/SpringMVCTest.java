@@ -11,6 +11,22 @@ public class SpringMVCTest {
 
 	private static final String SUCCESS = "success";
 	
+	/**
+	 * Rest风格的URL
+	 * 以CRUD为例：
+	 * 新增：/order POST
+	 * 修改：/order/1 PUT
+	 * 获取：/order/1 GET
+	 * 删除：/order/1 DELET
+	 * 
+	 * 如何发送PUT请求和DELETE请求呢?
+	 * 1.需要配置HiddenHttpMethodFilter
+	 * 2.需要发送POST请求
+	 * 3.需要在发送POST请求时携带一个name="_method"的隐藏域，值为DELETE或PUT
+	 * 
+	 * 在SpringMVC的目标方法中如何得到id呢？
+	 * 使用@PathVariable注解
+	 */
 	@RequestMapping(value = "/testRest", method=RequestMethod.PUT)
 	public String testRestPut(@PathVariable Integer id) {
 		System.out.println("testRest PUT:" + id);
