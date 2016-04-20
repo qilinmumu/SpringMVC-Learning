@@ -29,5 +29,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <br/><br/>
     
     names : ${requestScope.names}
+    <br/><br/>
+    
+    request user : ${requestScope.user}
+    <br/><br/>
+    
+    session user : ${sessionScope.user}
+    <br/><br/>
   </body>
 </html>

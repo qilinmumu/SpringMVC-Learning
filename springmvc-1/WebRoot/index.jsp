@@ -62,20 +62,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	<input type="hidden" name="_method" value="PUT"/>
     	<input type="submit" value="TestRest PUT"/>
     </form>
-    <br/>
-    <br/> 
+    <br/><br/> 
     
     <a href="springmvc/testRequestParam?username=qlmm&age=11">Test RequestParam</a>
-    <br/>
-    <br/> 
+    <br/><br/> 
     
     <a href="springmvc/testRequestHeader">Test RequestHeader</a>
-    <br/>
-    <br/> 
+    <br/><br/> 
     
     <a href="springmvc/testCookieValue">Test CookieValue</a>
-    <br/> 
-    <br/> 
+    <br/><br/> 
     
     <form action="springmvc/testPojo" method="post">
     	username:<input type="text" name="username"/> <br/>  
@@ -86,20 +82,34 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	city:<input type="text" name="address.city"> <br/> 
     	<input type="submit" value="Submit"/>
     </form>
-    <br/> 
-    <br/> 
+    <br/><br/> 
     
     <a href="springmvc/testServletAPI">Test Servlet API</a>
-    <br/> 
-    <br/> 
+    <br/><br/> 
     
     <a href="springmvc/testModelAndView">Test ModelAndView</a>
-    <br/> 
-    <br/> 
+    <br/><br/> 
     
     <a href="springmvc/testMap">Test Map</a>
-    <br/> 
-    <br/>
+    <br/><br/>
+    
+    <a href="springmvc/testSessionAttributes">Test SessionAttributes</a>
+    <br/><br/>
+    
+    <!-- 
+    	模拟修改操作：
+    	1.原始数据：1， Tom， 123456， tom@qq.com， 12
+    	2.密码不能被修改
+    	3.表单回显，模拟操作直接在表单填写对应的属性值
+    -->
+    <form action="springmvc/testModelAttribute"  method="post">
+    	<input type="hidden" name="id" value="1"/>
+    	username:<input type="text" name="username" value="Tom"/><br>
+    	email:<input type="text" name="email" value="tom@qq.com"/><br>
+    	age:<input type="text" name="age" value="12"/><br>
+    	<input type="submit" value="Submit"/>
+    </form>
+    <br/><br/>
     
   </body>
 </html>

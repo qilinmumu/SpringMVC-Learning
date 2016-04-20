@@ -1,6 +1,7 @@
 package edu.fjnu.springmvc.domain;
 
 public class User {
+	private Integer id;
 	private String username;
 	private String password;
 	private String email;
@@ -9,6 +10,32 @@ public class User {
 
 	public User() {
 		super();
+	}
+
+	public User(String username, String password, String email, int age) {
+		super();
+		this.username = username;
+		this.password = password;
+		this.email = email;
+		this.age = age;
+	}
+
+	public User(Integer id, String username, String password, String email,
+			int age) {
+		super();
+		this.id = id;
+		this.username = username;
+		this.password = password;
+		this.email = email;
+		this.age = age;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public String getUsername() {
@@ -54,7 +81,9 @@ public class User {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("User [username=");
+		builder.append("User [id=");
+		builder.append(id);
+		builder.append(", username=");
 		builder.append(username);
 		builder.append(", password=");
 		builder.append(password);
@@ -62,10 +91,8 @@ public class User {
 		builder.append(email);
 		builder.append(", age=");
 		builder.append(age);
-		builder.append(", address=");
-		builder.append(address);
 		builder.append("]");
 		return builder.toString();
 	}
-	
+
 }
