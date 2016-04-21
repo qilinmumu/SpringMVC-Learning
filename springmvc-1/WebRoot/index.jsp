@@ -111,5 +111,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </form>
     <br/><br/>
     
+    <a href="springmvc/testViewAndViewResolver">Test ViewAndViewResolver</a>
+    <br/><br/>
+    
   </body>
 </html>

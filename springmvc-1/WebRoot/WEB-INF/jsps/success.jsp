@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -35,6 +36,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <br/><br/>
     
     session user : ${sessionScope.user}
+    <br/><br/>
+    
+    <fmt:message key="i18n.username"></fmt:message>
+    <br/><br/>
+    
+    <fmt:message key="i18n.password"></fmt:message>
     <br/><br/>
   </body>
 </html>
